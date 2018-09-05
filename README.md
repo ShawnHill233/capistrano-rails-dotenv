@@ -8,7 +8,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 group :development do
-		gem 'capistrano-rails-dotenv'
+	gem 'capistrano-rails-dotenv'
 end
 ```
 
@@ -38,7 +38,7 @@ Config auto upload deploy task:
 
 ```ruby
 namespace :deploy do
-  	after :started, :upload_dotenv
+  after :started, :upload_dotenv
 end
 ```
 
