@@ -34,7 +34,7 @@ Add your ```.env``` file path to your deploy file:
 set :env_file, 'config/deploy/.env'
 ```
 
-Config auto upload deploy task:
+Configure automatic upload tasks, add these to your ```deploy.rb```:
 
 ```ruby
 namespace :deploy do
