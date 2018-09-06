@@ -28,10 +28,10 @@ Require it in your Capfile:
 require 'capistrano/rails/dotenv'
 ```
 
-Add .env file path to your deploy file:
+Add your ```.env``` file path to your deploy file:
 
 ```ruby
-set :env_file, 'config/deploy/.env.staging'
+set :env_file, 'config/deploy/.env'
 ```
 
 Config auto upload deploy task:
