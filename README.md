@@ -28,21 +28,12 @@ Require it in your Capfile:
 require 'capistrano/rails/dotenv'
 ```
 
-Add your ```.env``` file path to your deploy file:
+Add your ```.env``` file path to your deploy file, like this：
 
 ```ruby
-set :env_file, 'config/deploy/.env'
+set :env_file, 'config/deploy/.env.production'
 ```
-
-Configure automatic upload tasks, add these to your ```deploy.rb```:
-
-```ruby
-namespace :deploy do
-  after :started, :upload_dotenv
-end
-```
-
-Then, it will upload .env file while you deploy.
+The default path is ```config/deploy/.env.<staging>``` if it is not set.
 
 ## License
 

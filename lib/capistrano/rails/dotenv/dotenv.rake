@@ -1,7 +1,7 @@
 namespace :deploy do
   task :upload_dotenv do
 
-    env_file = fetch(:env_file, '.env')
+    env_file = fetch(:env_file, ".env.#{fetch(:stage)}")
   	fail "The .env file not specify or not found." unless File.exist?(env_file)
 
     on roles(:all) do
@@ -10,4 +10,6 @@ namespace :deploy do
       upload! env_file, to_path
     end
   end
+
+  after :started, :upload_dotenv
 end
