@@ -18,6 +18,6 @@ Gem::Specification.new do |spec|
     f.match(%r{^(test|spec|features)/})
   end
 
-  spec.add_development_dependency "capistrano-rails"
-  spec.add_development_dependency "dotenv"
+  spec.add_development_dependency 'capistrano-rails', '~> 3.0'
+  spec.add_development_dependency "dotenv-rails"
 end
