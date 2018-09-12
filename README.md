@@ -8,7 +8,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 group :development do
-  gem 'capistrano-rails-dotenv'
+  gem 'capistrano-rails-dotenv', require: false
 end
 ```
 
